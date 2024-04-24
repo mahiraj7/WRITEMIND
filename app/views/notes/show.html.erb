@@ -1,11 +1,12 @@
-<div class="mx-auto md:w-2/3 w-full flex">
-  <div class="mx-auto">
+<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-4">
+  <div class="mx-auto py-8">
     <%= render @note %>
+    <div class="mt-2">
+    <%= link_to "Edit this note", edit_note_path(@note), class: "text-teal-700 border border-teal-700 mt-3 rounded-lg py-3 px-3 bg-gray-100 inline-block font-medium hover:bg-gray-200" %>
 
-    <%= link_to "Edit this note", edit_note_path(@note), class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
-    <div class="inline-block ml-2">
-      <%= button_to "Destroy this note", note_path(@note), method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 font-medium" %>
+    <%= link_to "Back to notes", root_path, class: "text-teal-700 border border-teal-700 ml-2 mt-3 rounded-lg py-3 px-3 bg-gray-100 inline-block font-medium hover:bg-gray-200" %>
+
+    <%= button_to "Delete this note", note_path(@note), method: :delete, class: "text-white mt-4 rounded-lg py-3 px-3 bg-red-500 font-medium hover:bg-red-600" %>
     </div>
-    <%= link_to "Back to notes", notes_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
   </div>
 </div>

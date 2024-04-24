@@ -11,27 +11,59 @@
     </div>
   <% end %>
 
-  <div class="my-5">
+  <div class="flex flex-col my-4 text-xl">
     <%= form.label :title %>
-    <%= form.text_field :title, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+    <%= form.text_field :title, class: "block shadow rounded-md border border-gray-300 outline-none px-3 py-2 mt-2 w-full" %>
   </div>
 
-  <div class="my-5">
+  <div class="flex flex-col my-4 text-xl">
     <%= form.label :description %>
-    <%= form.text_field :description, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+    <%= form.text_area  :description, rows:5, class: "block shadow rounded-md border border-gray-300 outline-none px-3 py-2 mt-2 w-full" %>
   </div>
 
-  <div class="my-5">
-    <%= form.label :color %>
-    <%= form.text_field :color, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+
+  <div class="flex flex-col my-4 text-xl">
+    <%= form.label :color, 'Select Color', class:"mt-2"%>
+    <div class="flex gap-4 mt-2">
+    <label class="flex items-center gap-1">
+      <%= form.radio_button :color, 'bg-amber-200', class:'hidden'%>
+      <div class="color-option bg-amber-200 h-7 w-7 rounded"></div>
+    </label>
+
+    <label class="flex items-center gap-1">
+      <%= form.radio_button :color, 'bg-sky-200', class:'hidden'%>
+      <div class="color-option bg-sky-200 h-7 w-7 rounded"></div>
+    </label>
+
+    <label class="flex items-center gap-1">
+      <%= form.radio_button :color, 'bg-red-200', class:'hidden'%>
+      <div class="color-option bg-red-200 h-7 w-7 rounded"></div>
+    </label>
+
+    <label class="flex items-center gap-1">
+      <%= form.radio_button :color, 'bg-lime-200', class:'hidden'%>
+      <div class="color-option bg-lime-200 h-7 w-7 rounded"></div>
+    </label>
+
+    <label class="flex items-center gap-1">
+      <%= form.radio_button :color, 'bg-violet-200', class:'hidden'%>
+      <div class="color-option bg-violet-200 h-7 w-7 rounded"></div>
+    </label>
+    </div>
   </div>
 
-  <div class="my-5">
-    <%= form.label :user_id %>
-    <%= form.text_field :user_id, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
-  </div>
 
   <div class="inline">
-    <%= form.submit class: "rounded-lg py-3 px-5 bg-blue-600 text-white inline-block font-medium cursor-pointer" %>
+    <%= form.submit class: "text-white border border-teal-700 bg-teal-700 ml-2 mt-3 rounded-lg py-3 px-3 bg-gray-100 inline-block font-medium hover:bg-teal-800" %>
   </div>
 <% end %>
+
+<style>
+  .color-option{
+    cursor:pointer;
+  }
+
+  input[type="radio"]:checked + .color-option {
+    border : 2px solid black;
+  }
+</style>
