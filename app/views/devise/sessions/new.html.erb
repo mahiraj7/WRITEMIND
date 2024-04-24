@@ -1,0 +1,34 @@
+<div class="mx-auto text-2xl max-w-7xl px-4 py-4 sm:px-6 lg:px-8 py-4">
+  <div class=" flex flex-col items-center justify-center">
+    <%= image_tag 'logo.svg', class:"h-8 mt-5", alt:"Writemind Logo" %>
+
+  <div  class="border border-black mt-10 rounded-lg flex flex-col items-center py-1 px-4">
+    <h2 class="font-medium text-2xl mb-5 mt-3">Log in</h2>
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class="flex flex-col my-4 text-xl min-w-96">
+    <%= f.label :email %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", class:" border border-black rounded-md focus:"%>
+  </div>
+
+  <div class="flex flex-col my-4 text-xl">
+    <%= f.label :password %>
+    <%= f.password_field :password, autocomplete: "current-password", class:"border border-black rounded-md" %>
+  </div>
+
+  <% if devise_mapping.rememberable? %>
+    <div class="field">
+      <%= f.check_box :remember_me, class:"border border-black rounded-md text-teal-700 focus:ring-0"%>
+      <%= f.label :remember_me , class:"text-base"%>
+    </div>
+  <% end %>
+
+  <div class="flex flex-col items-center my-4 text-xl">
+    <%= f.submit "Log in" , class: "mt-2 text-white bg-teal-700 hover:bg-teal-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-3 text-center"%>
+  </div>
+  
+  <% end %>
+  </div>
+    <%= render "devise/shared/links" %>
+  </div>
+</div>

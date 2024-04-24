@@ -1,3 +1,18 @@
-<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 bg-yellow-300"
-    hellooooooo qweryuiop
+<div class="mx-auto max-w-7xl px-4 py-4 sm:px-6 lg:px-8 py-4">
+    <div class="grid grid-cols-1 md:grid-cols-2 ">
+        <div class="flex flex-col place-content-center py-8 py-16 items-center md:items-start">
+            <a>
+            <%= image_tag 'logo.svg', class:"h-12", alt:"Writemind Logo" %>
+            </a>
+            <h2 class=" mt-3 text-2xl font-semibold leading-7 text-gray-500">Streamline Your Thoughts:</h2>
+            <h2 class=" text-2xl font-semibold leading-7 text-teal-600">Your Notes, Your Way.</h2>
+            <div class="mt-5">
+                <%= link_to 'Get Started', new_user_session_path, class:"text-white bg-teal-700 hover:bg-teal-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-3 text-center"%>
+            </div>
+        </div>
+
+        <a>
+        <%= image_tag 'WM-illustration.svg', class:"mx-auto w-96 py-2 md:w-full md:py-16 ", alt:"Writemind Illustration" %>
+        </a>
+    </div>
 </div>
