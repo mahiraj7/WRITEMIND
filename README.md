@@ -1,5 +1,5 @@
 # Writemind 
-### Streamline Your Thoughts: Your Notes, Your Way.
+## Streamline Your Thoughts: Your Notes, Your Way.
 #### A Notes App built with Ruby on Rails and PostgreSQL. It's designed for seamless note-taking and organization, offering a clean interface and powerful features. Boost your productivity with this intuitive app!
 
 ![image](https://github.com/mahiraj7/WRITEMIND/assets/126379542/23ece4bc-d836-4dda-ba59-5fde84f7aa8c)
